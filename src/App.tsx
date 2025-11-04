@@ -5,7 +5,7 @@ import GreenhouseCapitalPage from '@/pages/GreenhouseCapitalPage';
 
 const LoadingScreen = () => (
   <div className="min-h-screen bg-white flex flex-col items-center justify-center">
-    <p className="mt-8 font-inter tracking-[0.2em] text-black text-sm uppercase">greenhouse capital</p>
+    <p className="mt-8 font-inter tracking-[0.2em] text-black text-sm uppercase loading-text">greenhouse capital</p>
   </div>
 );
 

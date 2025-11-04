@@ -87,3 +87,124 @@
   width: 48px;
   height: 48px;
 }
+
+/* Hero Text Sequential Animation */
+.hero-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: none;
+}
+
+.hero-text-1,
+.hero-text-2,
+.hero-text-3,
+.hero-text-4 {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Reveal Animations */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Company Title Hover Effect */
+.company-title {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.company-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.company-title:hover::after {
+  width: 100%;
+}
+
+/* Animated Link Effect */
+.animated-link {
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.animated-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animated-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Badge Pulse Animation */
+.badge-pulse {
+  animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+/* Loading Text Animation */
+.loading-text {
+  animation: loadingFade 2s ease-in-out infinite;
+}
+
+@keyframes loadingFade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Smooth Hardware Acceleration */
+.hero-text,
+.reveal-section,
+.company-title,
+.animated-link,
+.badge-pulse {
+  will-change: transform, opacity;
+}
