@@ -89,6 +89,44 @@ Product creators community for product, growth, and design professionals.
 
 **Email**: [hello@ghcapital.lat](mailto:hello@ghcapital.lat)
 
+## Deployment
+
+This project is configured for deployment on Vercel.
+
+### Deploy to Vercel
+
+1. **Import from GitHub**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New Project"
+   - Import from: `https://github.com/huayaney-exe/greenhouse-capital.git`
+
+2. **Vercel will auto-detect**:
+   - Framework: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+
+3. **Deploy**: Click "Deploy" - no additional configuration needed!
+
+### Local Production Build
+
+```bash
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+The production build is optimized and ready for deployment:
+- **CSS**: ~11KB (gzipped: 3.25KB)
+- **JS**: ~170KB (gzipped: 54.75KB)
+- **HTML**: ~0.94KB (gzipped: 0.43KB)
+
+## Repository
+
+GitHub: [https://github.com/huayaney-exe/greenhouse-capital.git](https://github.com/huayaney-exe/greenhouse-capital.git)
+
 ## License
 
 Private - All rights reserved
